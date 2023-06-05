@@ -5,12 +5,21 @@ print("**********************************")
 numero_secreto = 30
 
 chute_str = input("digite um numero: ")
+
 print("você digitou, ", chute_str)
+
 chute = int(chute_str)
 
-if numero_secreto == chute:
+acertou = chute == numero_secreto
+maior   = chute > numero_secreto
+menor   = chute < numero_secreto
+
+if acertou:
     print("você acertou o numero!")
 else:
-    print("você errou o numero! :( ")
+    if (maior):
+        print("você errou o numero! :(, seu chute foi maior que o numero secreto ")
+    if (menor):
+        print("você errou o numero! :(, seu chute foi menor que o numero secreto ")
 
 print("Acabou o jogo!")
